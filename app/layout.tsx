@@ -4,6 +4,7 @@ import './globals.css'
 import { routes } from '@/routes'
 import Link from 'next/link'
 import { Button, buttonVariants } from '@/components/ui/button'
+import { LucideHome } from 'lucide-react'
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -32,13 +33,14 @@ export default function RootLayout({
 			>
 				<header className="fixed top-0 left-0 right-0 backdrop-blur">
 					<nav>
-						<ul className="flex justify-between py-2.5 px-4 border-b">
+						<ul className="flex justify-between py-2.5 px-4 border-b items-center">
 							<li>
 								<Link
 									href={routes.home()}
-									className="text-lg font-bold hover:underline"
+									className="text-lg font-bold flex items-center gap-x-2 hover:opacity-70"
 								>
-									Home
+									<LucideHome />
+									<span>BugBounty</span>
 								</Link>
 							</li>
 							<li>
@@ -46,7 +48,7 @@ export default function RootLayout({
 									href={routes.tickets()}
 									className={buttonVariants({ variant: 'outline' })}
 								>
-									Tickets
+									All Bugs
 								</Link>
 							</li>
 						</ul>

@@ -9,7 +9,7 @@ function HomePage() {
 
 			<div>
 				<Link href={routes.tickets()} className="underline">
-					Go to tickets
+					Go to Bugs Page
 				</Link>
 			</div>
 		</div>

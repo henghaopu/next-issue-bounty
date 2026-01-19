@@ -9,8 +9,8 @@ function TicketsPage() {
 	return (
 		<div className="flex-1 flex flex-col gap-y-8">
 			<div>
-				<h1 className="text-3xl font-bold tracking-tight">Tickets Page</h1>
-				<p className="text-sm">All Tickets</p>
+				<h1 className="text-3xl font-bold tracking-tight">Bugs Page</h1>
+				<p className="text-sm">List of Bugs with Bounties</p>
 			</div>
 
 			<Separator />
