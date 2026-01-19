@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import type { ReactNode, SVGProps } from 'react'
 
-export type TicketStatus = 'new' | 'investigating' | 'fixing' | 'resolved'
+export type IssueStatus = 'new' | 'investigating' | 'fixing' | 'resolved'
 
 type IconProps = SVGProps<SVGSVGElement>
 
@@ -16,7 +16,7 @@ type StatusMeta = {
 	Icon: (props: IconProps) => ReactNode
 }
 
-const statusMeta: Record<TicketStatus, StatusMeta> = {
+const statusMeta: Record<IssueStatus, StatusMeta> = {
 	new: {
 		label: 'New',
 		accentClass: 'text-amber-600',
@@ -39,15 +39,12 @@ const statusMeta: Record<TicketStatus, StatusMeta> = {
 	},
 }
 
-type TicketStatusBadgeProps = {
-	status: TicketStatus
+type IssueStatusBadgeProps = {
+	status: IssueStatus
 	className?: string
 }
 
-export function TicketStatusBadge({
-	status,
-	className,
-}: TicketStatusBadgeProps) {
+export function IssueStatusBadge({ status, className }: IssueStatusBadgeProps) {
 	const { Icon, label, accentClass } = statusMeta[status]
 	const combinedClassName = [
 		'inline-flex items-center gap-x-1.5 text-sm font-medium',

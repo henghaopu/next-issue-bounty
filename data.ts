@@ -1,4 +1,4 @@
-const initialTickets = [
+const initialIssues = [
 	{
 		id: '1',
 		title: 'Crash on profile photo upload',
@@ -37,4 +37,4 @@ const initialTickets = [
 	},
 ]
 
-export default initialTickets
+export default initialIssues

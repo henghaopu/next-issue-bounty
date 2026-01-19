@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { routes } from '@/routes'
 import Link from 'next/link'
-import { Button, buttonVariants } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import { LucideHome } from 'lucide-react'
 
 const geistSans = Geist({
@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-	title: 'Bug Bounty',
-	description: 'Bug Bounty application built with Next.js',
+	title: 'Issue Bounty',
+	description: 'Issue Bounty application built with Next.js',
 }
 
 export default function RootLayout({
@@ -40,15 +40,15 @@ export default function RootLayout({
 									className="text-lg font-bold flex items-center gap-x-2 hover:opacity-70"
 								>
 									<LucideHome />
-									<span>BugBounty</span>
+									<span>IssueBounty</span>
 								</Link>
 							</li>
 							<li>
 								<Link
-									href={routes.tickets()}
+									href={routes.issues()}
 									className={buttonVariants({ variant: 'outline' })}
 								>
-									All Bugs
+									All Issues
 								</Link>
 							</li>
 						</ul>

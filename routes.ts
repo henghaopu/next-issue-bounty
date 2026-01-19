@@ -6,8 +6,8 @@ type RouteConfig = Record<string, RouteBuilder>
 
 export const routes = {
 	home: (): Route<'/'> => '/',
-	tickets: (): Route<'/tickets'> => '/tickets',
-	ticketDetail: (ticketId: string): Route => `/tickets/${ticketId}` as Route,
+	issues: (): Route<'/issues'> => '/issues',
+	issueDetail: (issueId: string): Route => `/issues/${issueId}` as Route,
 } satisfies RouteConfig
 
 export type RouteName = keyof typeof routes
