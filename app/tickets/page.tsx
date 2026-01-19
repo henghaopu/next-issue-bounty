@@ -3,6 +3,7 @@ import { TicketStatusBadge } from '@/components/ticket-status'
 import initialTickets from '@/data'
 import { routes } from '@/routes'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
 
 function TicketsPage() {
 	return (
@@ -11,6 +12,8 @@ function TicketsPage() {
 				<h1 className="text-3xl font-bold tracking-tight">Tickets Page</h1>
 				<p className="text-sm">All Tickets</p>
 			</div>
+
+			<Separator />
 
 			<div className="flex-1 flex flex-col items-center gap-y-4 my-4 animate-fade-in-from-top">
 				{initialTickets.map((ticket) => (
