@@ -4,6 +4,8 @@ import initialIssues from '@/data'
 import { routes } from '@/routes'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
+import { buttonVariants } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 
 function IssuesPage() {
 	return (
@@ -28,7 +30,7 @@ function IssuesPage() {
 						<CardFooter>
 							<Link
 								href={routes.issueDetail(issue.id)}
-								className="text-sm underline text-blue-600"
+								className={cn(buttonVariants({ variant: 'outline' }), 'w-full')}
 							>
 								Details
 							</Link>

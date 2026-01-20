@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Outfit } from 'next/font/google'
 import './globals.css'
-import { routes } from '@/routes'
 import Link from 'next/link'
-import { buttonVariants } from '@/components/ui/button'
+import { routes } from '@/routes'
 import { LucideHome } from 'lucide-react'
+import { buttonVariants } from '@/components/ui/button'
+
+const outfit = Outfit({ subsets: ['latin'], variable: '--font-sans' })
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -27,9 +29,9 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" className={outfit.variable}>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen flex flex-col`}
+				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
 				<header className="fixed top-0 left-0 right-0 backdrop-blur">
 					<nav>
@@ -46,7 +48,7 @@ export default function RootLayout({
 							<li>
 								<Link
 									href={routes.issues()}
-									className={buttonVariants({ variant: 'outline' })}
+									className={buttonVariants({ variant: 'default' })}
 								>
 									All Issues
 								</Link>
