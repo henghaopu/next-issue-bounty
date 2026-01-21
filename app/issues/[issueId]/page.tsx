@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation'
 import { IssueStatusBadge } from '@/components/issue-status'
 import initialIssues from '@/data'
 
@@ -6,7 +7,7 @@ async function IssueDetailPage({ params }: PageProps<'/issues/[issueId]'>) {
 	const issue = initialIssues.find((issue) => issue.id === issueId)
 
 	if (!issue) {
-		return <div>Invalid issue ID.</div>
+		notFound()
 	}
 
 	return (
