@@ -14,7 +14,7 @@ interface HeadingGroupProps extends ComponentPropsWithoutRef<'div'> {
 	title: string
 	subtitle?: string
 	heading?: HeadingTag
-	headingClassName?: string
+	titleClassName?: string
 	subtitleClassName?: string
 	withSeparator?: boolean
 	separatorClassName?: string
@@ -25,21 +25,28 @@ function HeadingGroup({
 	subtitle,
 	heading = 'h1',
 	className,
-	headingClassName,
+	titleClassName,
 	subtitleClassName,
-	withSeparator = true,
 	separatorClassName,
+	withSeparator = true,
 	...props
 }: HeadingGroupProps) {
 	const HeadingTag = heading
 
 	return (
-		<div className={cn('flex flex-col gap-y-1', className)} {...props}>
-			<HeadingTag className={cn(headingSizeMap[heading], headingClassName)}>
+		<div className={cn('flex flex-col', className)} {...props}>
+			<HeadingTag
+				className={cn('px-4', headingSizeMap[heading], titleClassName)}
+			>
 				{title}
 			</HeadingTag>
 			{subtitle ? (
-				<p className={cn('text-sm text-muted-foreground', subtitleClassName)}>
+				<p
+					className={cn(
+						'px-4 text-sm text-muted-foreground',
+						subtitleClassName,
+					)}
+				>
 					{subtitle}
 				</p>
 			) : null}
