@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import { IssueStatusBadge } from '@/components/issue-status'
+import { IssueStatusBadge } from '@/features/issue/components/issue-status'
 import initialIssues from '@/data'
 
 async function IssueDetailPage({ params }: PageProps<'/issues/[issueId]'>) {

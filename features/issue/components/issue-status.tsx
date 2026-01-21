@@ -5,8 +5,7 @@ import {
 	LucideSprayCan,
 } from 'lucide-react'
 import type { ReactNode, SVGProps } from 'react'
-
-export type IssueStatus = 'new' | 'investigating' | 'fixing' | 'resolved'
+import { IssueStatus } from '@/features/issue/types'
 
 type IconProps = SVGProps<SVGSVGElement>
 
