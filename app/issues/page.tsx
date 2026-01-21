@@ -1,6 +1,6 @@
 import HeadingGroup from '@/components/heading-group'
 import initialIssues from '@/data'
-import IssueItem from '@/features/issue/components/issue-item'
+import IssueCard from '@/features/issue/components/issue-card'
 
 function IssuesPage() {
 	return (
@@ -9,7 +9,7 @@ function IssuesPage() {
 
 			<div className="flex-1 flex flex-col items-center gap-y-4 my-4 animate-fade-in-from-top">
 				{initialIssues.map((issue) => (
-					<IssueItem key={issue.id} issue={issue} />
+					<IssueCard key={issue.id} issue={issue} />
 				))}
 			</div>
 		</div>

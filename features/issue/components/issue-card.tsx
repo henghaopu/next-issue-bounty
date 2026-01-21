@@ -10,7 +10,7 @@ type IssueItemProps = {
 	issue: Issue
 }
 
-function IssueItem({ issue }: IssueItemProps) {
+function IssueCard({ issue }: IssueItemProps) {
 	return (
 		<Card className="w-full max-w-105">
 			<CardHeader className="flex items-center justify-between gap-x-3">
@@ -32,4 +32,4 @@ function IssueItem({ issue }: IssueItemProps) {
 	)
 }
 
-export default IssueItem
+export default IssueCard
