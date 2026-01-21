@@ -4,19 +4,13 @@ import HeadingGroup from '@/components/heading-group'
 import initialIssues from '@/data'
 import { routes } from '@/routes'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
-import { Separator } from '@/components/ui/separator'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
 function IssuesPage() {
 	return (
 		<div className="flex-1 flex flex-col gap-y-8">
-			<HeadingGroup
-				title="Issues Page"
-				subtitle="List of Issues with Bounties"
-			/>
-
-			<Separator />
+			<HeadingGroup title="Issues" subtitle="List of Issues with Bounties" />
 
 			<div className="flex-1 flex flex-col items-center gap-y-4 my-4 animate-fade-in-from-top">
 				{initialIssues.map((issue) => (
