@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { IssueStatusBadge } from '@/components/issue-status'
+import HeadingGroup from '@/components/heading-group'
 import initialIssues from '@/data'
 import { routes } from '@/routes'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
@@ -10,10 +11,10 @@ import { cn } from '@/lib/utils'
 function IssuesPage() {
 	return (
 		<div className="flex-1 flex flex-col gap-y-8">
-			<div>
-				<h1 className="text-3xl font-bold tracking-tight">Issues Page</h1>
-				<p className="text-sm">List of Issues with Bounties</p>
-			</div>
+			<HeadingGroup
+				title="Issues Page"
+				subtitle="List of Issues with Bounties"
+			/>
 
 			<Separator />
 
